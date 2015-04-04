@@ -22,9 +22,10 @@ module.exports = function ( grunt ) {
         connect: {
             mock: {
                 options: {
-                    base: '/',
+                    base: '.',
                     open: true,
-                    keepalive: true
+                    keepalive: true,
+                    hostname: '*'
                 }
             }
         },
@@ -35,8 +36,8 @@ module.exports = function ( grunt ) {
             },
             styles: {
                 src: [
-                    'css/var/style.css',
-                    'css/var/style.css.map'
+                    'dist/css/style.css',
+                    'dist/css/style.css.map'
                 ]
             }
         },
@@ -48,7 +49,7 @@ module.exports = function ( grunt ) {
                     lineNumbers: true
                 },
                 files: {
-                    'var/css/style.css': 'css/style.scss'
+                    'dist/css/style.css': 'css/style.scss'
                 }
             },
             compressed: {
@@ -56,7 +57,7 @@ module.exports = function ( grunt ) {
                     style: 'compressed'
                 },
                 files: {
-                    'var/css/style.css': 'css/style.scss'
+                    'dist/css/style.css': 'css/style.scss'
                 }
             }
         },
