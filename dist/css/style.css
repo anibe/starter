@@ -259,6 +259,24 @@ th {
   padding: 0;
 }
 
+/* line 2, ../../css/core/_grid.scss */
+.container {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 6, ../../css/mixins/clearfix.scss */
+.container:before {
+  display: table;
+  content: "";
+}
+/* line 11, ../../css/mixins/clearfix.scss */
+.container:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
 /* @import "core/_icons"; */
 /* @import "core/ie";
 @import "core/firefox";
