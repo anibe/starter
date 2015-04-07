@@ -97,6 +97,7 @@ module.exports = function ( grunt ) {
     // Dev
     grunt.registerTask( 'dev', [
         'clean',
+        'test',
         'watch'
     ] );
 

@@ -1,7 +1,93 @@
+// Global styles
+
+* {
+    @include box-sizing(border-box);
+}
+
+
 // Fixed-width, centered column for site content.
 .container {
-  width: $container-width;
-  margin-right: auto;
-  margin-left: auto;
   @include clearfix;
+}
+
+.column,
+.row {
+    margin-left: -$gutter-spacing;
+    margin-right: -$gutter-spacing;
+    @include clearfix;
+
+    > * {
+        float: left;
+        padding: $gutter-spacing;
+    }
+}
+
+// Columns defaults
+
+.one-fourth {
+    width: 25%;
+}
+
+.half-width,
+.two-fourth {
+    width: 50%;
+ }
+
+ .three-fourth {
+    width: 75%;
+ }
+
+ .full-width {
+    width: 100%;
+ }
+
+// Responsive overides
+
+// Extra small grid: phones and small devices.
+
+@media (max-width: $screen-xs-max) {
+    .one-fourth,
+    .half-width,
+    .two-fourth,
+    .three-fourth,
+    .full-width {
+        @include linearise;
+    }
+
+    .column,
+    .row {
+        margin-left: auto;
+        margin-right: auto;     
+    }
+
+    .container {
+        width: 100%;
+    }  
+}
+
+// Small grid: phones and potrait tablets.
+@media (max-width: $screen-sm) and (max-width: $screen-sm-max) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+// Medium grid: Larger landscape tablets and desktops.
+@media (min-width: $screen-md) and (max-width: $screen-md-max)  {
+    .container {
+        width: $container-width-md;
+        margin-right: auto;
+        margin-left: auto;             
+    }  
+}
+
+
+// Large grid: Large desktop to tvs.
+@media (min-width: $screen-lg) {
+    .container {
+        width: $container-width;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }

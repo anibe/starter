@@ -1,0 +1,32 @@
+// Clearfix
+//
+// Clears floats via mixin (avoid using as a class).
+
+@mixin clearfix {
+  &:before {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+
+// Linearise
+// This returns columns to full width.
+
+@mixin linearise {
+	width: 100% !important;
+	float: none;
+}
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+   -webkit-box-sizing: $boxmodel;
+      -moz-box-sizing: $boxmodel;
+           box-sizing: $boxmodel;
+}

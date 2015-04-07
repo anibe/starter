@@ -259,24 +259,117 @@ th {
   padding: 0;
 }
 
-/* line 2, ../../css/core/_grid.scss */
-.container {
-  width: 980px;
-  margin-right: auto;
-  margin-left: auto;
+/* line 3, ../../css/core/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 6, ../../css/mixins/clearfix.scss */
+
+/* line 6, ../../css/mixins/layout.scss */
 .container:before {
   display: table;
   content: "";
 }
-/* line 11, ../../css/mixins/clearfix.scss */
+/* line 11, ../../css/mixins/layout.scss */
 .container:after {
   display: table;
   clear: both;
   content: "";
 }
 
+/* line 13, ../../css/core/_grid.scss */
+.column,
+.row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+/* line 6, ../../css/mixins/layout.scss */
+.column:before,
+.row:before {
+  display: table;
+  content: "";
+}
+/* line 11, ../../css/mixins/layout.scss */
+.column:after,
+.row:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+/* line 19, ../../css/core/_grid.scss */
+.column > *,
+.row > * {
+  float: left;
+  padding: 10px;
+}
+
+/* line 27, ../../css/core/_grid.scss */
+.one-fourth {
+  width: 25%;
+}
+
+/* line 31, ../../css/core/_grid.scss */
+.half-width,
+.two-fourth {
+  width: 50%;
+}
+
+/* line 36, ../../css/core/_grid.scss */
+.three-fourth {
+  width: 75%;
+}
+
+/* line 40, ../../css/core/_grid.scss */
+.full-width {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  /* line 49, ../../css/core/_grid.scss */
+  .one-fourth,
+  .half-width,
+  .two-fourth,
+  .three-fourth,
+  .full-width {
+    width: 100% !important;
+    float: none;
+  }
+
+  /* line 57, ../../css/core/_grid.scss */
+  .column,
+  .row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* line 63, ../../css/core/_grid.scss */
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) and (max-width: 991px) {
+  /* line 70, ../../css/core/_grid.scss */
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 78, ../../css/core/_grid.scss */
+  .container {
+    width: 768px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 88, ../../css/core/_grid.scss */
+  .container {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 /* @import "core/_icons"; */
 /* @import "core/ie";
 @import "core/firefox";
