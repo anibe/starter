@@ -266,6 +266,45 @@ th {
   box-sizing: border-box;
 }
 
+/* line 7, ../../css/core/_grid.scss */
+body {
+  font: 13px/1.4 Geneva, Tahoma, Helvetica, arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+/* line 13, ../../css/core/_grid.scss */
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+/* line 17, ../../css/core/_grid.scss */
+a:hover, a:active {
+  text-decoration: underline;
+  color: #2b69a7;
+}
+
+/* line 24, ../../css/core/_grid.scss */
+hr {
+  height: 0;
+  margin: 10px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+/* line 6, ../../css/mixins/layout.scss */
+hr:before {
+  display: table;
+  content: "";
+}
+/* line 11, ../../css/mixins/layout.scss */
+hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
 /* line 6, ../../css/mixins/layout.scss */
 .container:before {
   display: table;
@@ -278,7 +317,7 @@ th {
   content: "";
 }
 
-/* line 13, ../../css/core/_grid.scss */
+/* line 40, ../../css/core/_grid.scss */
 .column,
 .row {
   margin-left: -10px;
@@ -297,36 +336,36 @@ th {
   clear: both;
   content: "";
 }
-/* line 19, ../../css/core/_grid.scss */
+/* line 46, ../../css/core/_grid.scss */
 .column > *,
 .row > * {
   float: left;
   padding: 10px;
 }
 
-/* line 27, ../../css/core/_grid.scss */
+/* line 54, ../../css/core/_grid.scss */
 .one-fourth {
   width: 25%;
 }
 
-/* line 31, ../../css/core/_grid.scss */
+/* line 58, ../../css/core/_grid.scss */
 .half-width,
 .two-fourth {
   width: 50%;
 }
 
-/* line 36, ../../css/core/_grid.scss */
+/* line 63, ../../css/core/_grid.scss */
 .three-fourth {
   width: 75%;
 }
 
-/* line 40, ../../css/core/_grid.scss */
+/* line 67, ../../css/core/_grid.scss */
 .full-width {
   width: 100%;
 }
 
 @media (max-width: 767px) {
-  /* line 49, ../../css/core/_grid.scss */
+  /* line 76, ../../css/core/_grid.scss */
   .one-fourth,
   .half-width,
   .two-fourth,
@@ -336,26 +375,26 @@ th {
     float: none;
   }
 
-  /* line 57, ../../css/core/_grid.scss */
+  /* line 84, ../../css/core/_grid.scss */
   .column,
   .row {
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* line 63, ../../css/core/_grid.scss */
+  /* line 90, ../../css/core/_grid.scss */
   .container {
     width: 100%;
   }
 }
 @media (max-width: 768px) and (max-width: 991px) {
-  /* line 70, ../../css/core/_grid.scss */
+  /* line 97, ../../css/core/_grid.scss */
   .container {
     width: 100%;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 78, ../../css/core/_grid.scss */
+  /* line 105, ../../css/core/_grid.scss */
   .container {
     width: 768px;
     margin-right: auto;
@@ -363,7 +402,7 @@ th {
   }
 }
 @media (min-width: 1200px) {
-  /* line 88, ../../css/core/_grid.scss */
+  /* line 115, ../../css/core/_grid.scss */
   .container {
     width: 980px;
     margin-right: auto;

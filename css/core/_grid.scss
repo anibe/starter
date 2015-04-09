@@ -4,6 +4,33 @@
     @include box-sizing(border-box);
 }
 
+body {
+  font: #{$body-font-size}/1.4 $body-font;
+  color: $brand-gray-dark;
+  background-color: $white;
+}
+
+a {
+  color: $brand-blue;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    color: $brand-blue-darker;
+  }
+}
+
+hr {
+  height: 0;
+  margin: 10px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  @include clearfix();
+}
+
 
 // Fixed-width, centered column for site content.
 .container {

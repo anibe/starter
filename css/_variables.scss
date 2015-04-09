@@ -1,14 +1,41 @@
 
-// Margins, Padding & Radii
+//= Margins, Padding & Radii
 $container-width: 980px !default;
 $container-width-md: 768px !default;
 $gutter-spacing: 10px;
 
-// Colours
+//= Colours
+$brand-blue:       #4183c4 !default;
+$brand-blue-darker:#2b69a7 !default;
+$brand-gray-light: #999    !default;
+$brand-gray:       #666    !default;
+$brand-gray-dark:  #333    !default;
+$brand-green:      #6cc644 !default;
+$brand-red:        #bd2c00 !default;
+$brand-orange:     #f93    !default;
+$brand-purple:     #6e5494 !default;
+$white: 		   #fff !default;
 
-// Typography sizes
+//= Typography settings
+$body-font: Geneva, Tahoma, Helvetica, arial, sans-serif !default; // sans-serif stack
+$body-font-size: 13px !default; // The base body size
+$mono-font: Consolas, "Liberation Mono", Menlo, Courier, monospace !default; // Monospace font stack
 
-// Responsive breakpoints
+// Sizes
+$font-size-large:         ceil(($body-font-size * 1.25)) !default; // ~16px
+$font-size-small:         ceil(($body-font-size * 0.85)) !default; // ~10px
+$font-size-h1:            floor(($body-font-size * 2.6)) !default; // ~33px
+$font-size-h2:            floor(($body-font-size * 2.15)) !default; // ~28px
+$font-size-h3:            ceil(($body-font-size * 1.7)) !default; // ~22px
+$font-size-h4:            ceil(($body-font-size * 1.25)) !default; // ~16px
+$font-size-h5:            $body-font-size !default;
+$font-size-h6:            ceil(($body-font-size * 0.85)) !default; // ~11px
+
+$line-height-base:        1.428571429 !default;
+
+
+
+//= Responsive breakpoints
 
 // Extra small screen / phone
 $screen-xs:                  480px !default;
