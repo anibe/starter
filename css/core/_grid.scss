@@ -39,13 +39,13 @@ hr {
 
 .column,
 .row {
-    margin-left: -$gutter-spacing;
-    margin-right: -$gutter-spacing;
+    /* margin-left: -$gutter-spacing;
+    margin-right: -$gutter-spacing; */
     @include clearfix;
 
     > * {
         float: left;
-        padding: $gutter-spacing;
+        padding: 0 $gutter-spacing;
     }
 }
 
@@ -97,6 +97,12 @@ hr {
     .container {
         width: 100%;
     }
+
+    .column,
+    .row {
+        margin-left: auto;
+        margin-right: auto;     
+    }    
 }
 
 
@@ -106,7 +112,12 @@ hr {
         width: $container-width-md;
         margin-right: auto;
         margin-left: auto;             
-    }  
+    }
+    .column,
+    .row {
+        margin-left: 0;
+        margin-right: 0;     
+    }      
 }
 
 
