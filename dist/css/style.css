@@ -423,7 +423,45 @@ hr:after {
     margin-left: auto;
   }
 }
-/* @import "core/_icons"; */
+/* @import "superfluous/icons"; */
+/*
+Based on Responsive Breakpoints utility - git.lastminute.com/flights/lmn-mobile-flights
+Media queries used in conjunction with js/breakpoints.js to add a class to the HTML based on the screen size eg. 'sm' for mobile, 'lg' for desktop
+*/
+/* Mobile by def */
+/* line 8, ../../css/superfluous/_breakpoints.scss */
+body:after {
+  content: "xs";
+  /* represent the current width-bracket */
+  font-size: 1px;
+  background: #ccc;
+  display: block;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* line 17, ../../css/superfluous/_breakpoints.scss */
+  body:after {
+    content: "sm";
+    /* represent the current width-bracket */
+  }
+}
+/* Desktop */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* line 24, ../../css/superfluous/_breakpoints.scss */
+  body:after {
+    content: "md";
+    /* represent the current width-bracket */
+  }
+}
+/* Desktop large */
+@media screen and (min-width: 1200px) {
+  /* line 31, ../../css/superfluous/_breakpoints.scss */
+  body:after {
+    content: "lg";
+    /* represent the current width-bracket */
+  }
+}
 /* @import "core/ie";
 @import "core/firefox";
  */

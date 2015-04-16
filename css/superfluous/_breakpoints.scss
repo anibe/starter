@@ -1,0 +1,34 @@
+
+/*
+Based on Responsive Breakpoints utility - http://git.lastminute.com/flights/lmn-mobile-flights
+Media queries used in conjunction with js/breakpoints.js to add a class to the HTML based on the screen size eg. 'sm' for mobile, 'lg' for desktop
+*/
+
+/* Mobile by def */
+body:after {
+    content: "xs"; /* represent the current width-bracket */
+    font-size: 1px;
+    background: #ccc;
+    display: block;
+}
+
+/* Tablet */
+@media screen and (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+    body:after {
+        content: "sm"; /* represent the current width-bracket */
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: $screen-md) and (max-width: $screen-md-max) {
+    body:after {
+        content: "md"; /* represent the current width-bracket */
+    }
+}
+
+/* Desktop large */
+@media screen and (min-width: $screen-lg) {
+    body:after {
+        content: "lg"; /* represent the current width-bracket */
+    }
+}

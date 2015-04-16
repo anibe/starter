@@ -3,7 +3,7 @@
 // Reset
 @import "core/reset";
 
-// Core 
+// Core
 @import "variables";
 @import "core/mixins";
 
@@ -15,13 +15,10 @@
 @import "core/media";
 
 // Add-ons (Superfluous)
-/* @import "core/_icons"; */
+/* @import "superfluous/icons"; */
+@import "superfluous/breakpoints";
 
 // Browser fixes
 /* @import "core/ie";
 @import "core/firefox";
  */
-
-
-
-
