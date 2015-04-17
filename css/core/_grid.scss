@@ -4,6 +4,13 @@
     @include box-sizing(border-box);
 }
 
+html {
+  overflow-y: scroll;
+    min-height: 100%;
+    -moz-osx-font-smoothing: grayscale;
+     -webkit-font-smoothing: antialiased;
+}
+
 body {
   font: #{$body-font-size}/1.4 $body-font;
   color: $brand-gray-dark;

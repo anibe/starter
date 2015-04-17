@@ -267,24 +267,32 @@ th {
 }
 
 /* line 7, ../../css/core/_grid.scss */
+html {
+  overflow-y: scroll;
+  min-height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 14, ../../css/core/_grid.scss */
 body {
   font: 13px/1.4 Geneva, Tahoma, Helvetica, arial, sans-serif;
   color: #333;
   background-color: #fff;
 }
 
-/* line 13, ../../css/core/_grid.scss */
+/* line 20, ../../css/core/_grid.scss */
 a {
   color: #4183c4;
   text-decoration: none;
 }
-/* line 17, ../../css/core/_grid.scss */
+/* line 24, ../../css/core/_grid.scss */
 a:hover, a:active {
   text-decoration: underline;
   color: #2b69a7;
 }
 
-/* line 24, ../../css/core/_grid.scss */
+/* line 31, ../../css/core/_grid.scss */
 hr {
   height: 0;
   margin: 10px 0;
@@ -317,7 +325,7 @@ hr:after {
   content: "";
 }
 
-/* line 40, ../../css/core/_grid.scss */
+/* line 47, ../../css/core/_grid.scss */
 .column,
 .row {
   /* margin-left: -$gutter-spacing;
@@ -336,36 +344,36 @@ hr:after {
   clear: both;
   content: "";
 }
-/* line 46, ../../css/core/_grid.scss */
+/* line 53, ../../css/core/_grid.scss */
 .column > *,
 .row > * {
   float: left;
   padding: 0 10px;
 }
 
-/* line 54, ../../css/core/_grid.scss */
+/* line 61, ../../css/core/_grid.scss */
 .one-fourth {
   width: 25%;
 }
 
-/* line 58, ../../css/core/_grid.scss */
+/* line 65, ../../css/core/_grid.scss */
 .half-width,
 .two-fourth {
   width: 50%;
 }
 
-/* line 63, ../../css/core/_grid.scss */
+/* line 70, ../../css/core/_grid.scss */
 .three-fourth {
   width: 75%;
 }
 
-/* line 67, ../../css/core/_grid.scss */
+/* line 74, ../../css/core/_grid.scss */
 .full-width {
   width: 100%;
 }
 
 @media (max-width: 767px) {
-  /* line 76, ../../css/core/_grid.scss */
+  /* line 83, ../../css/core/_grid.scss */
   .one-fourth,
   .half-width,
   .two-fourth,
@@ -375,25 +383,25 @@ hr:after {
     float: none;
   }
 
-  /* line 84, ../../css/core/_grid.scss */
+  /* line 91, ../../css/core/_grid.scss */
   .column,
   .row {
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* line 90, ../../css/core/_grid.scss */
+  /* line 97, ../../css/core/_grid.scss */
   .container {
     width: 100%;
   }
 }
 @media (max-width: 768px) and (max-width: 991px) {
-  /* line 97, ../../css/core/_grid.scss */
+  /* line 104, ../../css/core/_grid.scss */
   .container {
     width: 100%;
   }
 
-  /* line 101, ../../css/core/_grid.scss */
+  /* line 108, ../../css/core/_grid.scss */
   .column,
   .row {
     margin-left: auto;
@@ -401,14 +409,14 @@ hr:after {
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 111, ../../css/core/_grid.scss */
+  /* line 118, ../../css/core/_grid.scss */
   .container {
     width: 768px;
     margin-right: auto;
     margin-left: auto;
   }
 
-  /* line 116, ../../css/core/_grid.scss */
+  /* line 123, ../../css/core/_grid.scss */
   .column,
   .row {
     margin-left: 0;
@@ -416,7 +424,7 @@ hr:after {
   }
 }
 @media (min-width: 1200px) {
-  /* line 126, ../../css/core/_grid.scss */
+  /* line 133, ../../css/core/_grid.scss */
   .container {
     width: 980px;
     margin-right: auto;
@@ -425,7 +433,7 @@ hr:after {
 }
 /* @import "superfluous/icons"; */
 /*
-Based on Responsive Breakpoints utility - git.lastminute.com/flights/lmn-mobile-flights
+Based on Responsive Breakpoints utility - http://git.lastminute.com/flights/lmn-mobile-flights
 Media queries used in conjunction with js/breakpoints.js to add a class to the HTML based on the screen size eg. 'sm' for mobile, 'lg' for desktop
 */
 /* Mobile by def */
