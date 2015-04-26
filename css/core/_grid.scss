@@ -38,6 +38,10 @@ hr {
   @include clearfix();
 }
 
+.clearfix {
+  @include clearfix();
+}
+
 
 // Fixed-width, centered column for site content.
 .container {
