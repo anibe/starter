@@ -1,0 +1,18 @@
+// Mixin to create buttons
+@mixin style-button($start, $end, $textColor, $isRounded: false) {
+  $degree: 5%;
+  background: $end;
+  color: $textColor;
+
+  border: 1px solid darken($end, $degree);
+
+  background-image: linear-gradient(darken($start, $degree), darken($end, $degree));
+
+  @if $isRounded { border-radius: 5px;}
+}
+
+@mixin button-hover($start, $end, $degree) {
+  background-image: linear-gradient(darken($start, $degree), darken($end, $degree));
+  border: 1px solid darken($end, $degree * 2);
+  text-decoration: none;
+}
