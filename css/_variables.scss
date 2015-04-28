@@ -8,13 +8,16 @@ $gutter-spacing: 10px;
 $brand-blue:       #4183c4 !default;
 $brand-blue-darker:#2b69a7 !default;
 $brand-gray-light: #999    !default;
+$brand-silver:     #ccc    !default;
 $brand-gray:       #666    !default;
 $brand-gray-dark:  #333    !default;
 $brand-green:      #6cc644 !default;
 $brand-red:        #bd2c00 !default;
 $brand-orange:     #f93    !default;
 $brand-purple:     #6e5494 !default;
-$white: 		   #fff !default;
+$white: 		       #fff !default;
+
+$element-outline:  #51a7e8 !default; // It's blueish!        
 
 //= Typography settings
 $body-font: Geneva, Tahoma, Helvetica, arial, sans-serif !default; // sans-serif stack

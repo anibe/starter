@@ -1,7 +1,7 @@
-// General
+// = General
 
 
-// Buttons - Heavily inspired by github.com/google/web-starter-kit/blob/master/app/styles/components/_components/_button.scss
+//= Buttons - Heavily inspired by github.com/google/web-starter-kit/blob/master/app/styles/components/_components/_button.scss
 
 $hover-alteration-degree:         2%;
 $default-bgcolour-start:          #f5f5f5;
@@ -10,22 +10,24 @@ $default-bgcolour-end:            #f1f1f1;
 $primary-bgcolour-start:          $brand-green;
 $primary-bgcolour-end:            #65bc3e;
 
+$danger-bgcolour-start:           $brand-red;
+$danger-bgcolour-end:             #a72700;
+
 $default-text-color:              #565656;
 $light-text-color:                $white;
 
 button,
 .button,
-.btn {
+.btn,
+input[type=submit] {
   display: inline-block;
   padding: $gutter-spacing ($gutter-spacing * 2);
-  margin-bottom: $line-height-base / 2;
-  margin-top: $line-height-base / 2;
   border: 1px solid darken($default-bgcolour-end, $hover-alteration-degree);
   text-align: center;
   text-decoration: none;
-  color: $default-text-color;
   outline: 0;
   transition: none;
+  font-weight: bold;
 
   @include style-button($default-bgcolour-start, $default-bgcolour-end, $default-text-color);
 
@@ -45,10 +47,64 @@ button,
 
 .button--danger,
 .btn-danger {
-  //@include style-button(#ffffff, $brand-blue);
+  @include style-button($danger-bgcolour-start, $danger-bgcolour-end, $light-text-color);
+
+  &:hover {
+    @include button-hover($danger-bgcolour-start, $danger-bgcolour-end, $hover-alteration-degree);
+  }
 }
 
-// Inputs
+//= Inputs
 
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
 
-//
+input[type=text],
+input[type=email],
+input[type=phone],
+input[type=password],
+input[type=number],
+input[type=search],
+textarea {
+
+  border: 1px solid $brand-silver;
+  height: $line-height-base;
+  outline: none;
+  padding: 5px 10px;
+  width: 300px;
+
+  min-height: ($line-height-base * 28);
+  padding: ($gutter-spacing - 3) ($gutter-spacing - 2);
+  color: $brand-gray-dark;
+  vertical-align: middle;
+  background-color: $white;
+  background-repeat: no-repeat; // Repeat and position set for form states (success, error, etc)
+  background-position: right center;
+  border: 1px solid $brand-silver;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+
+  &:focus {
+    border-color: $element-outline;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5);
+  }
+}
+
+textarea {
+  height: $line-height-base*3;
+}
+
+form {
+  margin-bottom: $gutter-spacing;
+
+  // Wrap each form input/element in a field div
+  .field {
+    margin-bottom: $gutter-spacing/2;
+  }
+
+}

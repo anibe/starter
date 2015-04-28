@@ -449,35 +449,61 @@ hr:after {
     margin-left: auto;
   }
 }
-/* line 16, ../../css/core/_form.scss */
+/* line 19, ../../css/core/_form.scss */
 button,
 .button,
-.btn {
+.btn,
+input[type=submit] {
   display: inline-block;
   padding: 10px 20px;
-  margin-bottom: 0.71429;
-  margin-top: 0.71429;
   border: 1px solid #ececec;
   text-align: center;
   text-decoration: none;
-  color: #565656;
   outline: 0;
   transition: none;
+  font-weight: bold;
   background: #f1f1f1;
   color: #565656;
   border: 1px solid #e4e4e4;
   background-image: linear-gradient(#e8e8e8, #e4e4e4);
 }
-/* line 32, ../../css/core/_form.scss */
+/* line 11, ../../css/mixins/buttons.scss */
+button:focus,
+.button:focus,
+.btn:focus,
+input[type=submit]:focus {
+  text-decoration: none;
+  border-color: #51a7e8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(81, 167, 232, 0.5);
+}
+/* line 18, ../../css/mixins/buttons.scss */
+button:focus:hover,
+.button:focus:hover,
+.btn:focus:hover,
+input[type=submit]:focus:hover {
+  border-color: #51a7e8;
+}
+/* line 22, ../../css/mixins/buttons.scss */
+button:active,
+.button:active,
+.btn:active,
+input[type=submit]:active {
+  background-image: none;
+  border-color: #b5b5b5;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+/* line 34, ../../css/core/_form.scss */
 button:hover,
 .button:hover,
-.btn:hover {
+.btn:hover,
+input[type=submit]:hover {
   background-image: linear-gradient(#f0f0f0, #ececec);
   border: 1px solid #e7e7e7;
   text-decoration: none;
 }
 
-/* line 37, ../../css/core/_form.scss */
+/* line 39, ../../css/core/_form.scss */
 .button--primary,
 .btn-primary {
   background: #65bc3e;
@@ -485,12 +511,127 @@ button:hover,
   border: 1px solid #5ba938;
   background-image: linear-gradient(#60b838, #5ba938);
 }
-/* line 41, ../../css/core/_form.scss */
+/* line 11, ../../css/mixins/buttons.scss */
+.button--primary:focus,
+.btn-primary:focus {
+  text-decoration: none;
+  border-color: #51a7e8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(81, 167, 232, 0.5);
+}
+/* line 18, ../../css/mixins/buttons.scss */
+.button--primary:focus:hover,
+.btn-primary:focus:hover {
+  border-color: #51a7e8;
+}
+/* line 22, ../../css/mixins/buttons.scss */
+.button--primary:active,
+.btn-primary:active {
+  background-image: none;
+  border-color: #b5b5b5;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+/* line 43, ../../css/core/_form.scss */
 .button--primary:hover,
 .btn-primary:hover {
   background-image: linear-gradient(#66c43c, #61b43b);
   border: 1px solid #5dad39;
   text-decoration: none;
+}
+
+/* line 48, ../../css/core/_form.scss */
+.button--danger,
+.btn-danger {
+  background: #a72700;
+  color: #fff;
+  border: 1px solid #8d2100;
+  background-image: linear-gradient(#a42600, #8d2100);
+}
+/* line 11, ../../css/mixins/buttons.scss */
+.button--danger:focus,
+.btn-danger:focus {
+  text-decoration: none;
+  border-color: #51a7e8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(81, 167, 232, 0.5);
+}
+/* line 18, ../../css/mixins/buttons.scss */
+.button--danger:focus:hover,
+.btn-danger:focus:hover {
+  border-color: #51a7e8;
+}
+/* line 22, ../../css/mixins/buttons.scss */
+.button--danger:active,
+.btn-danger:active {
+  background-image: none;
+  border-color: #b5b5b5;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+/* line 52, ../../css/core/_form.scss */
+.button--danger:hover,
+.btn-danger:hover {
+  background-image: linear-gradient(#b32a00, #9d2500);
+  border: 1px solid #932200;
+  text-decoration: none;
+}
+
+/* line 59, ../../css/core/_form.scss */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* line 66, ../../css/core/_form.scss */
+input[type=text],
+input[type=email],
+input[type=phone],
+input[type=password],
+input[type=number],
+input[type=search],
+textarea {
+  border: 1px solid #ccc;
+  height: 1.42857;
+  outline: none;
+  padding: 5px 10px;
+  width: 300px;
+  min-height: 40.0;
+  padding: 7px 8px;
+  color: #333;
+  vertical-align: middle;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right center;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+}
+/* line 92, ../../css/core/_form.scss */
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=phone]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+input[type=search]:focus,
+textarea:focus {
+  border-color: #51a7e8;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5);
+}
+
+/* line 98, ../../css/core/_form.scss */
+textarea {
+  height: 4.28571;
+}
+
+/* line 102, ../../css/core/_form.scss */
+form {
+  margin-bottom: 10px;
+}
+/* line 106, ../../css/core/_form.scss */
+form .field {
+  margin-bottom: 5px;
 }
 
 /* @import "superfluous/icons"; */
