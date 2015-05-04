@@ -374,25 +374,31 @@ hr:after {
 }
 
 /* line 73, ../../css/core/_grid.scss */
+.two-third {
+  width: 66.7%;
+}
+
+/* line 77, ../../css/core/_grid.scss */
 .half-width,
 .two-fourth {
   width: 50%;
 }
 
-/* line 78, ../../css/core/_grid.scss */
+/* line 82, ../../css/core/_grid.scss */
 .three-fourth {
   width: 75%;
 }
 
-/* line 82, ../../css/core/_grid.scss */
+/* line 86, ../../css/core/_grid.scss */
 .full-width {
   width: 100%;
 }
 
 @media (max-width: 767px) {
-  /* line 91, ../../css/core/_grid.scss */
+  /* line 95, ../../css/core/_grid.scss */
   .one-fourth,
   .one-third,
+  .two-third,
   .half-width,
   .two-fourth,
   .three-fourth,
@@ -401,25 +407,25 @@ hr:after {
     float: none;
   }
 
-  /* line 100, ../../css/core/_grid.scss */
+  /* line 105, ../../css/core/_grid.scss */
   .column,
   .row {
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* line 106, ../../css/core/_grid.scss */
+  /* line 111, ../../css/core/_grid.scss */
   .container {
     width: 100%;
   }
 }
 @media (max-width: 768px) and (max-width: 991px) {
-  /* line 113, ../../css/core/_grid.scss */
+  /* line 118, ../../css/core/_grid.scss */
   .container {
     width: 100%;
   }
 
-  /* line 117, ../../css/core/_grid.scss */
+  /* line 122, ../../css/core/_grid.scss */
   .column,
   .row {
     margin-left: auto;
@@ -427,14 +433,14 @@ hr:after {
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 127, ../../css/core/_grid.scss */
+  /* line 132, ../../css/core/_grid.scss */
   .container {
     width: 768px;
     margin-right: auto;
     margin-left: auto;
   }
 
-  /* line 132, ../../css/core/_grid.scss */
+  /* line 137, ../../css/core/_grid.scss */
   .column,
   .row {
     margin-left: 0;
@@ -442,14 +448,14 @@ hr:after {
   }
 }
 @media (min-width: 1200px) {
-  /* line 142, ../../css/core/_grid.scss */
+  /* line 147, ../../css/core/_grid.scss */
   .container {
     width: 980px;
     margin-right: auto;
     margin-left: auto;
   }
 }
-/* line 19, ../../css/core/_form.scss */
+/* line 18, ../../css/core/_form.scss */
 button,
 .button,
 .btn,
@@ -493,7 +499,7 @@ input[type=submit]:active {
   border-color: #b5b5b5;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
 }
-/* line 34, ../../css/core/_form.scss */
+/* line 33, ../../css/core/_form.scss */
 button:hover,
 .button:hover,
 .btn:hover,
@@ -501,9 +507,10 @@ input[type=submit]:hover {
   background-image: linear-gradient(#f0f0f0, #ececec);
   border: 1px solid #e7e7e7;
   text-decoration: none;
+  color: #565656;
 }
 
-/* line 39, ../../css/core/_form.scss */
+/* line 38, ../../css/core/_form.scss */
 .button--primary,
 .btn-primary {
   background: #65bc3e;
@@ -531,15 +538,16 @@ input[type=submit]:hover {
   border-color: #b5b5b5;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
 }
-/* line 43, ../../css/core/_form.scss */
+/* line 42, ../../css/core/_form.scss */
 .button--primary:hover,
 .btn-primary:hover {
   background-image: linear-gradient(#66c43c, #61b43b);
   border: 1px solid #5dad39;
   text-decoration: none;
+  color: #fff;
 }
 
-/* line 48, ../../css/core/_form.scss */
+/* line 47, ../../css/core/_form.scss */
 .button--danger,
 .btn-danger {
   background: #a72700;
@@ -567,15 +575,16 @@ input[type=submit]:hover {
   border-color: #b5b5b5;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
 }
-/* line 52, ../../css/core/_form.scss */
+/* line 51, ../../css/core/_form.scss */
 .button--danger:hover,
 .btn-danger:hover {
   background-image: linear-gradient(#b32a00, #9d2500);
   border: 1px solid #932200;
   text-decoration: none;
+  color: #fff;
 }
 
-/* line 59, ../../css/core/_form.scss */
+/* line 58, ../../css/core/_form.scss */
 label {
   display: block;
   font-weight: 600;
@@ -583,7 +592,7 @@ label {
   cursor: pointer;
 }
 
-/* line 66, ../../css/core/_form.scss */
+/* line 65, ../../css/core/_form.scss */
 input[type=text],
 input[type=email],
 input[type=phone],
@@ -608,7 +617,7 @@ textarea {
   outline: none;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
 }
-/* line 92, ../../css/core/_form.scss */
+/* line 91, ../../css/core/_form.scss */
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=phone]:focus,
@@ -620,18 +629,24 @@ textarea:focus {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5);
 }
 
-/* line 98, ../../css/core/_form.scss */
+/* line 97, ../../css/core/_form.scss */
 textarea {
   height: 4.28571;
 }
 
-/* line 102, ../../css/core/_form.scss */
+/* line 101, ../../css/core/_form.scss */
 form {
   margin-bottom: 10px;
 }
-/* line 106, ../../css/core/_form.scss */
+/* line 105, ../../css/core/_form.scss */
 form .field {
   margin-bottom: 5px;
+}
+
+/* line 2, ../../css/core/_media.scss */
+img.responsive {
+  width: 100%;
+  max-width: 100%;
 }
 
 /* @import "superfluous/icons"; */

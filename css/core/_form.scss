@@ -1,6 +1,5 @@
 // = General
 
-
 //= Buttons - Heavily inspired by github.com/google/web-starter-kit/blob/master/app/styles/components/_components/_button.scss
 
 $hover-alteration-degree:         2%;
@@ -32,7 +31,7 @@ input[type=submit] {
   @include style-button($default-bgcolour-start, $default-bgcolour-end, $default-text-color);
 
   &:hover {
-    @include button-hover($default-bgcolour-start, $default-bgcolour-end, $hover-alteration-degree); // (gradient start colour, gradient end colour, alteration degree)
+    @include button-hover($default-bgcolour-start, $default-bgcolour-end, $hover-alteration-degree, $default-text-color); // (gradient start colour, gradient end colour, alteration degree)
   }
 }
 
@@ -41,7 +40,7 @@ input[type=submit] {
   @include style-button($primary-bgcolour-start, $primary-bgcolour-end, $light-text-color);
 
   &:hover {
-    @include button-hover($primary-bgcolour-start, $primary-bgcolour-end, $hover-alteration-degree);
+    @include button-hover($primary-bgcolour-start, $primary-bgcolour-end, $hover-alteration-degree, $light-text-color);
   }
 }
 
@@ -50,7 +49,7 @@ input[type=submit] {
   @include style-button($danger-bgcolour-start, $danger-bgcolour-end, $light-text-color);
 
   &:hover {
-    @include button-hover($danger-bgcolour-start, $danger-bgcolour-end, $hover-alteration-degree);
+    @include button-hover($danger-bgcolour-start, $danger-bgcolour-end, $hover-alteration-degree, $light-text-color);
   }
 }
 

@@ -27,8 +27,9 @@
   }
 }
 
-@mixin button-hover($start, $end, $degree) {
+@mixin button-hover($start, $end, $degree, $textColor) {
   background-image: linear-gradient(darken($start, $degree), darken($end, $degree));
   border: 1px solid darken($end, $degree * 2);
   text-decoration: none;
+  color: $textColor;
 }

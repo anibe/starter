@@ -70,6 +70,10 @@ hr {
     width: 33.3%;
 }
 
+.two-third {
+    width: 66.7%;
+}
+
 .half-width,
 .two-fourth {
     width: 50%;
@@ -90,6 +94,7 @@ hr {
 @media (max-width: $screen-xs-max) {
     .one-fourth,
     .one-third,
+    .two-third,
     .half-width,
     .two-fourth,
     .three-fourth,
