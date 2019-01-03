@@ -8,6 +8,23 @@ I've decided to create a Frontend layout starter framework. The goal is to have 
 * Basic styling for buttons, inputs
 * Browser reset (normalise)
 
+## Getting Started
+You'll need npm to build and test the source code
+### Install dependencies
+```
+npm install
+```
+ 
+### Compiling
+To create a production ready build run
+```
+npm run build
+```
+If you want a non-minified build, with sourcemaps, run
+```
+npm run build:dev
+```
+
 ## Components
 The Starter UI provides styling for the following elements:
 * Responsive grid

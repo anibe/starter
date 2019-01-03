@@ -4,11 +4,12 @@
   "version": "1.1.0",
   "private": true,
   "scripts": {
-    "build": "npm run build-sass",
+    "build": "npm run test && npm run build-sass",
+    "build:dev": "npm run build-sass:dev",
     "build-sass": "node-sass css/style.scss dist/css/style.css --output-style compressed",
-    "build-sass-dev": "node-sass css/style.scss dist/css/style.dev.css --source-map true",
+    "build-sass:dev": "node-sass css/style.scss dist/css/style.dev.css --source-map true",
     "lint:sass": "sass-lint ./css/**/*.scss ./css/*.scss --verbose",
-    "test": "npm run sass-lint"
+    "test": "npm run lint:sass"
   },
   "devDependencies": {
     "node-sass": "^4.11.0",
