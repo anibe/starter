@@ -4,14 +4,14 @@
 
 @mixin clearfix {
   &:before {
-    display: table;
     content: "";
+    display: table;
   }
 
   &:after {
-    display: table;
     clear: both;
     content: "";
+    display: table;
   }
 }
 
@@ -20,13 +20,13 @@
 // This returns columns to full width.
 
 @mixin linearise {
-	width: 100% !important;
 	float: none;
+	width: 100% !important;
 }
 
 // Box sizing
 @mixin box-sizing($boxmodel) {
-   -webkit-box-sizing: $boxmodel;
-      -moz-box-sizing: $boxmodel;
+   -moz-box-sizing: $boxmodel;
+      -webkit-box-sizing: $boxmodel;
            box-sizing: $boxmodel;
 }

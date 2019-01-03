@@ -2,17 +2,17 @@
 @mixin style-button($start, $end, $textColor, $isRounded: false) {
   $degree: 5%;
   background: $end;
-  color: $textColor;
-  border: 1px solid darken($end, $degree);
   background-image: linear-gradient(darken($start, $degree), darken($end, $degree));
+  border: 1px solid darken($end, $degree);
+  color: $textColor;
 
   @if $isRounded { border-radius: 5px;}
 
   &:focus {
-    text-decoration: none;
     border-color: $element-outline;
-    outline: none;
     box-shadow: 0 0 5px rgba(81, 167, 232, 0.5);
+    outline: none;
+    text-decoration: none;
   }
 
   &:focus:hover {
@@ -30,6 +30,6 @@
 @mixin button-hover($start, $end, $degree, $textColor) {
   background-image: linear-gradient(darken($start, $degree), darken($end, $degree));
   border: 1px solid darken($end, $degree * 2);
-  text-decoration: none;
   color: $textColor;
+  text-decoration: none;
 }

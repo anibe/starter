@@ -5,16 +5,16 @@
 }
 
 html {
-  overflow-y: scroll;
+  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     min-height: 100%;
-    -moz-osx-font-smoothing: grayscale;
-     -webkit-font-smoothing: antialiased;
+     overflow-y: scroll;
 }
 
 body {
-  font: #{$body-font-size}/1.4 $body-font;
-  color: $brand-gray-dark;
   background-color: $white;
+  color: $brand-gray-dark;
+  font: #{$body-font-size}/1.4 $body-font;
 }
 
 a {
@@ -23,18 +23,18 @@ a {
 
   &:hover,
   &:active {
-    text-decoration: underline;
     color: $brand-blue-darker;
+    text-decoration: underline;
   }
 }
 
 hr {
-  height: 0;
-  margin: 10px 0;
-  overflow: hidden;
   background: transparent;
   border: 0;
   border-bottom: 1px solid #ddd;
+  height: 0;
+  margin: 10px 0;
+  overflow: hidden;
   @include clearfix();
 }
 
@@ -130,10 +130,11 @@ hr {
 // Medium grid: Larger landscape tablets and desktops.
 @media (min-width: $screen-md) and (max-width: $screen-md-max)  {
     .container {
-        width: $container-width-md;
+        margin-left: auto;
         margin-right: auto;
-        margin-left: auto;             
+        width: $container-width-md;             
     }
+
     .column,
     .row {
         margin-left: 0;
@@ -145,8 +146,8 @@ hr {
 // Large grid: Large desktop to tvs.
 @media (min-width: $screen-lg) {
     .container {
-        width: $container-width;
-        margin-right: auto;
         margin-left: auto;
+        margin-right: auto;
+        width: $container-width;
     }
 }

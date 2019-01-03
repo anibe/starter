@@ -6,10 +6,10 @@ Media queries used in conjunction with js/breakpoints.js to add a class to the H
 
 /* Mobile by def */
 body:after {
-    content: "xs"; /* represent the current width-bracket */
-    font-size: 1px;
-    background: #ccc;
+    background: #ccc; /* represent the current width-bracket */
+    content: "xs";
     display: block;
+    font-size: 1px;
 }
 
 /* Tablet */
