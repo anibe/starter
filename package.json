@@ -7,12 +7,15 @@
     "build": "npm run test && npm run build-sass",
     "build:dev": "npm run build-sass:dev",
     "build-sass": "node-sass css/style.scss dist/css/style.css --output-style compressed",
-    "build-sass:dev": "node-sass css/style.scss dist/css/style.dev.css --source-map true",
-    "lint:sass": "sass-lint ./css/**/*.scss ./css/*.scss --verbose",
-    "test": "npm run lint:sass"
+    "build-sass:dev": "node-sass css/style.scss dist/css/style.dev.css --output-style expanded --source-map true",
+    "lint-sass": "sass-lint ./css/**/*.scss ./css/*.scss --verbose",
+    "test": "npm run lint-sass",
+    "lint-sass:fix": "sass-lint-auto-fix --config-sass-lint .sass-lint.yml"
   },
   "devDependencies": {
     "node-sass": "^4.11.0",
-    "sass-lint": "^1.12.1"
-  }
+    "sass-lint": "^1.12.1",
+    "sass-lint-auto-fix": "^0.15.0"
+  },
+  "sasslintConfig": ".sass-lint.yml"
 }

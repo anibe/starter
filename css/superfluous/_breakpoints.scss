@@ -6,29 +6,29 @@ Media queries used in conjunction with js/breakpoints.js to add a class to the H
 
 /* Mobile by def */
 body:after {
-    background: #ccc; /* represent the current width-bracket */
-    content: "xs";
-    display: block;
-    font-size: 1px;
+	background: #ccc; /* represent the current width-bracket */
+	content: "xs";
+	display: block;
+	font-size: 1px;
 }
 
 /* Tablet */
 @media screen and (min-width: $screen-sm) and (max-width: $screen-sm-max) {
-    body:after {
-        content: "sm"; /* represent the current width-bracket */
-    }
+	body:after {
+		content: "sm"; /* represent the current width-bracket */
+	}
 }
 
 /* Desktop */
 @media screen and (min-width: $screen-md) and (max-width: $screen-md-max) {
-    body:after {
-        content: "md"; /* represent the current width-bracket */
-    }
+	body:after {
+		content: "md"; /* represent the current width-bracket */
+	}
 }
 
 /* Desktop large */
 @media screen and (min-width: $screen-lg) {
-    body:after {
-        content: "lg"; /* represent the current width-bracket */
-    }
+	body:after {
+		content: "lg"; /* represent the current width-bracket */
+	}
 }

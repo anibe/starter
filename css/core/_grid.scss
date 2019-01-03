@@ -1,153 +1,153 @@
 // Global styles
 
 * {
-    @include box-sizing(border-box);
+	@include box-sizing(border-box);
 }
 
 html {
-  -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    min-height: 100%;
-     overflow-y: scroll;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	min-height: 100%;
+	overflow-y: scroll;
 }
 
 body {
-  background-color: $white;
-  color: $brand-gray-dark;
-  font: #{$body-font-size}/1.4 $body-font;
+	background-color: $white;
+	color: $brand-gray-dark;
+	font: #{$body-font-size} / 1.4 $body-font;
 }
 
 a {
-  color: $brand-blue;
-  text-decoration: none;
+	color: $brand-blue;
+	text-decoration: none;
 
-  &:hover,
-  &:active {
-    color: $brand-blue-darker;
-    text-decoration: underline;
-  }
+	&:hover,
+	&:active {
+		color: $brand-blue-darker;
+		text-decoration: underline;
+	}
 }
 
 hr {
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #ddd;
-  height: 0;
-  margin: 10px 0;
-  overflow: hidden;
-  @include clearfix();
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #ddd;
+	height: 0;
+	margin: 10px 0;
+	overflow: hidden;
+	@include clearfix();
 }
 
 .clearfix {
-  @include clearfix();
+	@include clearfix();
 }
 
 
 // Fixed-width, centered column for site content.
 .container {
-  @include clearfix;
+	@include clearfix;
 }
 
 .column,
 .row {
-    /* margin-left: -$gutter-spacing;
-    margin-right: -$gutter-spacing; */
-    @include clearfix;
+	/* margin-left: -$gutter-spacing;
+	margin-right: -$gutter-spacing; */
+	@include clearfix;
 
-    > * {
-        float: left;
-        padding: 0 $gutter-spacing;
-    }
+	> * {
+		float: left;
+		padding: 0 $gutter-spacing;
+	}
 }
 
 // Columns defaults
 
 .one-fourth {
-    width: 25%;
+	width: 25%;
 }
 
 .one-third {
-    width: 33.3%;
+	width: 33.3%;
 }
 
 .two-third {
-    width: 66.7%;
+	width: 66.7%;
 }
 
 .half-width,
 .two-fourth {
-    width: 50%;
- }
+	width: 50%;
+}
 
- .three-fourth {
-    width: 75%;
- }
+.three-fourth {
+	width: 75%;
+}
 
- .full-width {
-    width: 100%;
- }
+.full-width {
+	width: 100%;
+}
 
 // Responsive overides
 
 // Extra small grid: phones and small devices.
 
 @media (max-width: $screen-xs-max) {
-    .one-fourth,
-    .one-third,
-    .two-third,
-    .half-width,
-    .two-fourth,
-    .three-fourth,
-    .full-width {
-        @include linearise;
-    }
+	.one-fourth,
+	.one-third,
+	.two-third,
+	.half-width,
+	.two-fourth,
+	.three-fourth,
+	.full-width {
+		@include linearise;
+	}
 
-    .column,
-    .row {
-        margin-left: auto;
-        margin-right: auto;     
-    }
+	.column,
+	.row {
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-    .container {
-        width: 100%;
-    }  
+	.container {
+		width: 100%;
+	}
 }
 
 // Small grid: phones and potrait tablets.
 @media (max-width: $screen-sm) and (max-width: $screen-sm-max) {
-    .container {
-        width: 100%;
-    }
+	.container {
+		width: 100%;
+	}
 
-    .column,
-    .row {
-        margin-left: auto;
-        margin-right: auto;     
-    }    
+	.column,
+	.row {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 
 // Medium grid: Larger landscape tablets and desktops.
 @media (min-width: $screen-md) and (max-width: $screen-md-max)  {
-    .container {
-        margin-left: auto;
-        margin-right: auto;
-        width: $container-width-md;             
-    }
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		width: $container-width-md;
+	}
 
-    .column,
-    .row {
-        margin-left: 0;
-        margin-right: 0;     
-    }      
+	.column,
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 
 // Large grid: Large desktop to tvs.
 @media (min-width: $screen-lg) {
-    .container {
-        margin-left: auto;
-        margin-right: auto;
-        width: $container-width;
-    }
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		width: $container-width;
+	}
 }
